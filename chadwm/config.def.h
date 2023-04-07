@@ -178,7 +178,7 @@ static const Key keys[] = {
 
     { MODKEY|ShiftMask,                 XK_j,       movestack,      {.i = +1 } },
     { MODKEY|ShiftMask,                 XK_k,       movestack,      {.i = -1 } },
-    { MODKEY|ShiftMask,                 XK_Return,  zoom,           {0} },
+    { MODKEY|ControlMask,               XK_Return,  zoom,           {0} },
     { MODKEY,                           XK_Tab,     view,           {0} },
 
     // overall gaps
@@ -227,7 +227,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                 XK_w,       setborderpx,    {.i = default_border } },
 
     // kill dwm
-    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("killall bar.sh dwm") },
+    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("pkill dwm") },
 
     // kill window
     { MODKEY,                           XK_q,       killclient,     {0} },
